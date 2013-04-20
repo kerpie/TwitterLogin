@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.projectarli.logins"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="10" />
+    
+    <!-- Permission - Internet Connect -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Network State Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.projectarli.logins.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.projectarli.logins.LoginActivity"
+            android:label="@string/title_activity_login" 
+            android:launchMode="singleInstance">
+			<intent-filter>
+            	<action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+			    <category android:name="android.intent.category.DEFAULT" />
+			    <category android:name="android.intent.category.BROWSABLE" />
+			    <data android:scheme="kunfoodtesting" android:host="kerpie.com"/>
+            </intent-filter>	
+        </activity>
+    </application>    
+</manifest>
